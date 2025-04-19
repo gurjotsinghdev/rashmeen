@@ -19,7 +19,7 @@ export default function Page() {
       
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          I'm a data scientist with a strong foundation in AI and Machine Learning,
+          I'm a data analyst with a strong foundation in AI and Machine Learning,
           backed by a Postgraduate degree in Artificial Intelligence & ML.
         </p>
         <p>
