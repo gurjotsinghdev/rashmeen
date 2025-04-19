@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { socialLinks } from "./config";
+ 
 
 export default function Page() {
   return (
     <section>
-      <a href={socialLinks.twitter} target="_blank">
+      {/* <a href={socialLinks.twitter} target="_blank">
         <Image
           src="/profile.png"
           alt="Profile photo"
@@ -14,52 +15,38 @@ export default function Page() {
           height={160}
           priority
         />
-      </a>
-      <h1 className="mb-8 text-2xl font-medium tracking-tight">
-        Rashmeen Malhotra
-      </h1>
+      </a> */}
+      
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          A clean, fast, and lightweight portfolio template built with Next.js,
-          Vercel, and Tailwind CSS.
+          I'm a data scientist with a strong foundation in AI and Machine Learning,
+          backed by a Postgraduate degree in Artificial Intelligence & ML.
         </p>
         <p>
-          Nextfolio has everything you need for a portfolio: MDX blog, SEO, RSS,
-          Atom & JSON feeds, analytics, Tweet & YouTube embeds, KaTeX and {""}
-          <a
-            target="_blank"
-            href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
-          >
-            more
-          </a>
-          .
-        </p>
+  This portfolio showcases my expertise in transforming data into
+  actionable insights using tools like Python, SQL, Power BI, Excel, 
+  Pandas, NumPy, Scikit-learn, TensorFlow, Jupyter Notebooks, Tableau, 
+  Matplotlib, and VS Code.
+</p>
+        
+        
         <p>
-          Nextfolio is{" "}
+          If you're looking to hire a detail-oriented data analyst with a passion
+          for AI-driven insights and clean visualizations, let's connect!
+        </p>
+
+        <p className = "text-2xl">
+          Explore my{" "}
+          <a href="/projects">projects</a>, and visit my {" "}
           <a href={socialLinks.github} target="_blank">
-            open-source
+            GitHub
           </a>{" "}
-          and fully customizable, making it easy to add more features.
-        </p>
-        <p>
-          <a
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
-            target="_blank"
-          >
-            Deploy
-          </a>{" "}
-          your Nextfolio site with Vercel in minutes and follow the set up
-          instructions in the{" "}
-          <a href="/blog/getting-started">Getting Started</a> post.
-        </p>
-        <p>
-          Built and maintained by{" "}
-          <a href="https://imsirius.xyz/" target="_blank">
-            Sirius
-          </a>
-          .
+          to see more.
         </p>
       </div>
     </section>
+
+
+
   );
 }
