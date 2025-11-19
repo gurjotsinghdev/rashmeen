@@ -1,3 +1,4 @@
+"use client";
 import { socialLinks } from "./config";
 
 const projects = [
