@@ -26,7 +26,7 @@ export const caseStudies: CaseStudy[] = [
     link: "https://rivererp.com",
     role: "Product Manager (Self-directed)",
     product: "ERPNext-based SaaS for SMBs",
-    timeline: "2024 - Present",
+    timeline: "June 2025 - Present",
     summary:
       "Designed a transaction-based, unlimited-user ERP built for clarity, onboarding speed, and operational visibility.",
     highlights: [
@@ -111,7 +111,7 @@ export const caseStudies: CaseStudy[] = [
     link: "https://promptpromax.com",
     role: "Product Manager (Product teardown + growth plan)",
     product: "Crowdsourced prompt library for makers, marketers, and builders",
-    timeline: "2024",
+    timeline: "Sept 2025 - Present",
     summary:
       "Reviewed the product experience, surfaced friction in discovery, and defined a roadmap to increase engagement and sponsor conversion.",
     highlights: [
