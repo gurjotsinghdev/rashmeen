@@ -7,15 +7,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Customer Churn Prediction ",
+    title: "River ERP",
     year: 2024,
-    description: "Python and Scikit-learn",
-    url: "https://github.com/mithrilai",
+    description: "Transaction-based ERP product for SMBs",
+    url: "https://rivererp.com",
   },
   {
-    title: "Exploratory Data Analysis on Sales Data",
-    year: 2023,
-    description: "Pandas and Matplotlib",
-    url: "https://opendeeplearning.xyz/",
+    title: "PromptProMax",
+    year: 2024,
+    description: "Crowdsourced prompt discovery platform",
+    url: "https://promptpromax.com",
   },
 ];

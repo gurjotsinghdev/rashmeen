@@ -46,8 +46,6 @@ export const metadata: Metadata = {
   },
 };
 
-const cx = (...classes) => classes.filter(Boolean).join(" ");
-
 export default function RootLayout({
   children,
 }: {
@@ -75,19 +73,22 @@ export default function RootLayout({
           title="JSON Feed"
         />
       </head>
-      <body className="antialiased flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-20 lg:mb-40">
+      <body className="antialiased flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-20 lg:mb-40 bg-white text-black">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
-          <main className="flex flex-col flex-auto min-w-0 mt-2 md:mt-6 px-4 sm:px-6 md:px-0 w-full max-w-full md:max-w-[924px] mx-auto">
-            {children}
-            <Footer />
-            <Analytics />
-            <SpeedInsights />
-          </main>
+          <div className="w-full max-w-[1120px] px-4 sm:px-6 lg:px-8">
+            <Navbar />
+            <main className="flex flex-col flex-auto min-w-0 mt-2 md:mt-6">
+              {children}
+              <Footer />
+              <Analytics />
+              <SpeedInsights />
+            </main>
+          </div>
         </ThemeProvider>
       </body>
     </html>

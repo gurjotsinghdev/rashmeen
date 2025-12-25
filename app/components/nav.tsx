@@ -3,24 +3,24 @@ import { ThemeSwitch } from "./theme-switch";
 import { metaData } from "../config";
 
 const navItems = {
-  "/projects": { name: "Projects" },
+  "/#case-studies": { name: "Case Studies" },
+  "/#principles": { name: "Principles" },
+  "/#contact": { name: "Contact" },
 };
 
 export function Navbar() {
   return (
-    <nav className="lg:mb-16 mb-12 py-5">
-      <div className="flex flex-col md:flex-row md:items-center justify-between">
-        <div className="flex items-center">
-          <Link href="/" className="text-3xl font-semibold tracking-tight">
-            {metaData.title}
-          </Link>
-        </div>
-        <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto items-center">
+    <nav className="py-6 md:py-8">
+      <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <Link href="/" className="text-lg font-semibold tracking-tight">
+          {metaData.title}
+        </Link>
+        <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-700">
           {Object.entries(navItems).map(([path, { name }]) => (
             <Link
               key={path}
               href={path}
-              className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative"
+              className="transition-colors hover:text-black"
             >
               {name}
             </Link>

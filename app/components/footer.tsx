@@ -1,58 +1,25 @@
-"use client";
-
-import React from "react";
-import {
-  FaXTwitter,
-  FaGithub,
-  FaInstagram,
-  FaRss,
-  FaLinkedinIn,
-} from "react-icons/fa6";
-import { TbMailFilled } from "react-icons/tb";
 import { metaData, socialLinks } from "app/config";
 
 const YEAR = new Date().getFullYear();
 
-function SocialLink({ href, icon: Icon }) {
-  return (
-    <a href={href} target="_blank" rel="noopener noreferrer">
-      <Icon />
-    </a>
-  );
-}
-
-function SocialLinks() {
-  return (
-    <div className="flex text-lg gap-3.5 float-right transition-opacity duration-300 hover:opacity-90">
-      <SocialLink href={socialLinks.github} icon={FaGithub} />
-      <SocialLink href={socialLinks.instagram} icon={FaInstagram} />
-      <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
-      
-    </div>
-  );
-}
-
 export default function Footer() {
   return (
-    <small className="block lg:mt-24 mt-16 text-[#1C1C1C] dark:text-[#D4D4D4]">
-      <time>© {YEAR}</time>{" "}
-      <a
-        className="no-underline"
-        href={socialLinks.twitter}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Rashmeen Malhotra - Data Scientist Portfolio
-      </a>
-      <style jsx>{`
-        @media screen and (max-width: 480px) {
-          article {
-            padding-top: 2rem;
-            padding-bottom: 4rem;
-          }
-        }
-      `}</style>
-      <SocialLinks />
-    </small>
+    <footer className="mt-16 border-t border-black/10 pt-6 text-sm text-neutral-600">
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-1">
+          <span className="text-neutral-900">© {YEAR} {metaData.title}</span>
+          <span>Product Manager building B2B SaaS and AI workflows.</span>
+        </div>
+        <div className="flex flex-wrap items-center gap-4 text-neutral-700">
+          <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          <a href={socialLinks.email}>Email</a>
+        </div>
+      </div>
+    </footer>
   );
 }
