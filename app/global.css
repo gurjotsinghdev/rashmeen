@@ -53,6 +53,122 @@ html {
   animation: fade-up 0.6s ease-out both;
 }
 
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.float-slower {
+  animation: float 12s ease-in-out infinite;
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translateX(0) rotate(-12deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.8;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-160vw) rotate(-12deg);
+    opacity: 0;
+  }
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shooting-stars {
+  position: absolute;
+  inset: 0;
+}
+
+.shooting-star {
+  position: absolute;
+  left: 110%;
+  width: 180px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0;
+  animation: shooting-star 9s linear infinite;
+}
+
+.shooting-star::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  filter: blur(0.5px);
+}
+
+.star-1 {
+  top: 12%;
+  animation-delay: 1s;
+}
+
+.star-2 {
+  top: 38%;
+  animation-delay: 3.6s;
+  animation-duration: 11s;
+}
+
+.star-3 {
+  top: 68%;
+  animation-delay: 6.2s;
+  animation-duration: 10s;
+}
+
+@media (max-width: 640px) {
+  .shooting-star {
+    width: 120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up,
+  .float-slow,
+  .float-slower,
+  .shooting-star {
+    animation: none;
+  }
+}
+
 .prose {
   @apply text-[#000000] dark:text-[#FFFFFF];
 }

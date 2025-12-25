@@ -72,8 +72,15 @@ export default function RootLayout({
           title="JSON Feed"
         />
       </head>
-      <body className="antialiased flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-20 lg:mb-40 bg-white text-black">
-        <div className="w-full max-w-[1120px] px-4 sm:px-6 lg:px-8">
+      <body className="antialiased flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-20 lg:mb-40 bg-white text-black relative">
+        <div className="site-bg" aria-hidden="true">
+          <div className="shooting-stars">
+            <span className="shooting-star star-1" />
+            <span className="shooting-star star-2" />
+            <span className="shooting-star star-3" />
+          </div>
+        </div>
+        <div className="relative z-10 w-full max-w-[1120px] px-4 sm:px-6 lg:px-8">
           <Navbar />
           <main className="flex flex-col flex-auto min-w-0 mt-2 md:mt-6">
             {children}
