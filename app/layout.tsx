@@ -5,7 +5,6 @@ import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
-import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./config";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -74,22 +73,15 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-20 lg:mb-40 bg-white text-black">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
-          <div className="w-full max-w-[1120px] px-4 sm:px-6 lg:px-8">
-            <Navbar />
-            <main className="flex flex-col flex-auto min-w-0 mt-2 md:mt-6">
-              {children}
-              <Footer />
-              <Analytics />
-              <SpeedInsights />
-            </main>
-          </div>
-        </ThemeProvider>
+        <div className="w-full max-w-[1120px] px-4 sm:px-6 lg:px-8">
+          <Navbar />
+          <main className="flex flex-col flex-auto min-w-0 mt-2 md:mt-6">
+            {children}
+            <Footer />
+            <Analytics />
+            <SpeedInsights />
+          </main>
+        </div>
       </body>
     </html>
   );
