@@ -12,5 +12,5 @@ export const socialLinks = {
   github: "https://github.com/1msirius/Nextfolio",
   instagram: "https://www.instagram.com/",
   linkedin: "https://www.linkedin.com/in/rashmeenmalhotra/",
-  email: "mailto:sheenumalhotra3@gmail.com",
+  email: "mailto:malhotrarashmeen@gmail.com",
 };
